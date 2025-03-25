@@ -1,0 +1,252 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 15px 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Hero Section */
+.hero {
+    height: 50vh;
+    background: #6c5ce7;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: #ff6347;
+    padding: 12px 25px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;  /* This removes the underline */
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: #e74c3c;
+    transform: scale(1.05);
+}
+
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background: #f4f4f4;
+}
+
+.feature {
+    text-align: center;
+    width: 30%;
+}
+
+.features a {
+    text-decoration: none; /* Removes underline from the anchor links */
+    color: inherit; /* Ensures the link color inherits from the parent element (h2) */
+}
+
+.features a:hover {
+    text-decoration: none; /* Ensures no underline on hover as well */
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #0b0b0bdf, #191817); /* Gradient background */
+    color: #fff;
+    padding: 20px 20px;  /* Reduced padding */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Reduced padding for footer-container */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Reduced gap */
+}
+
+/* Reduced margin for footer sections */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px; /* Reduced margin */
+}
+
+/* Footer section headings */
+.footer-section h3 {
+    font-size: 18px;  /* Reduced font size */
+    margin-bottom: 10px;  /* Reduced margin */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer section paragraphs */
+.footer-section p {
+    font-size: 14px;  /* Reduced font size */
+    line-height: 1.6;
+    color: #dcdcdc;
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+    text-align: center;
+    padding: 15px;  /* Reduced padding */
+    background-color: #333;
+    margin-top: 20px;  /* Reduced margin */
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: 14px;
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .feature h2 {
+        font-size: 22px;
+    }
+
+    .feature p {
+        font-size: 14px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
+}
+
+/* For smaller mobile screens */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}

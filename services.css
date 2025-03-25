@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    perspective: 1500px; /* Enable 3D perspective */
+}
+
+.services-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h2 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.service-card:hover {
+    transform: rotateY(15deg) rotateX(10deg); /* 3D rotation */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Shadow effect */
+}
+
+.premium {
+    background-color: #f8f8f8;
+    border: 2px solid #4CAF50;
+}
+
+.premium-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.premium-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.premium-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .services {
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    .service-card {
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%; /* Make cards take up most of the screen on small devices */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .premium-btn {
+        width: 100%; /* Full-width button on smaller screens */
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .service-card h2 {
+        font-size: 1.3em; /* Slightly smaller titles on small screens */
+    }
+
+    .service-card p {
+        font-size: 0.9em; /* Adjust text size for better readability */
+    }
+
+    .premium-btn {
+        padding: 16px;
+        font-size: 1em; /* Increase button size for mobile */
+    }
+}

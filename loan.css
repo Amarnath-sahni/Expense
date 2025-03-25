@@ -1,0 +1,142 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 15px 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Feature Section */
+.feature {
+    padding: 40px 20px;
+    text-align: center;
+    background: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+}
+
+.feature h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.feature p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Form Inputs */
+input[type="number"],
+input[type="date"],
+button {
+    padding: 12px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #6c5ce7;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6347;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .feature h2 {
+        font-size: 28px;
+    }
+
+    .feature p {
+        font-size: 16px;
+    }
+
+    .feature {
+        padding: 30px 10px;
+    }
+
+    input[type="number"],
+    input[type="date"],
+    button {
+        width: 80%;
+    }
+}
+
+/* For smaller mobile screens */
+@media (max-width: 480px) {
+    .feature h2 {
+        font-size: 24px;
+    }
+
+    .feature p {
+        font-size: 14px;
+    }
+
+    .feature {
+        padding: 20px 10px;
+    }
+
+    input[type="number"],
+    input[type="date"],
+    button {
+        width: 100%;
+    }
+}
+
+
+
